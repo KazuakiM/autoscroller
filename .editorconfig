@@ -1,0 +1,36 @@
+# EditorConfig is awesome: http://EditorConfig.org
+
+# top-most EditorConfig file
+root = true
+
+# Unix-style newlines with a newline ending every file
+[*]
+end_of_line = lf
+insert_final_newline = false
+charset = utf-8
+
+# CSS - https://developer.mozilla.org/ja/docs/Web/CSS
+# Sass(SCSS) - http://sass-lang.com/
+# Stylus - https://learnboost.github.io/stylus/
+# SugarSS - https://github.com/postcss/sugarss#readme
+[*.{css,scss,styl,sss}]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = true
+
+# JavaScript - https://developer.mozilla.org/ja/docs/Web/JavaScript
+# TypeScript - https://www.typescriptlang.org/
+# CoffeeScript - http://coffeescript.org/
+[*.{js,ts}]
+indent_style = space
+indent_size = 2
+
+# JSON - http://json.org/
+[*.{json}]
+indent_style = space
+indent_size = 4
+
+# NPM - https://docs.npmjs.com/files/package.json
+[{package.json}]
+indent_style = space
+indent_size = 2
