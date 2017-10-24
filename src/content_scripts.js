@@ -1,10 +1,8 @@
 "use strict";
 
 let autoscrollerCS = {
-  "listenMessage": function(message) {
-    //{{{
-    window.scrollBy(0, 100);
-    //}}}
+  "listenMessage": function() {
+    window.scrollBy(0, 1);
   }
 };
 

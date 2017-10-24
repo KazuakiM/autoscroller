@@ -1,7 +1,5 @@
 {
-    "background": {
-        "scripts": ["src/background.js"]
-    },
+    "background": {"scripts": ["src/background.js"]},
     "browser_action": {
         "default_icon": "img/browser_action_32.png",
         "default_title": "AutsSroller"
@@ -18,6 +16,10 @@
     },
     "manifest_version": 2,
     "name": "AutsSroller",
-    "permissions": ["activeTab"],
+    "options_ui": {"page": "src/options_ui.html"},
+    "permissions": [
+        "activeTab",
+        "storage"
+    ],
     "version": "1.0"
 }
