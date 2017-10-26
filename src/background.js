@@ -5,14 +5,16 @@ let autoscrollerBS = {
   "timmer": null,
   "interval": 10,
 
-  "checkStoredSettings": function(storedSettings) {
+  "checkLSData": function(lsData) {
     //{{{
-    if (!storedSettings.intervalLS) {
+
+    if (typeof lsData.intervalLS !== "undefined" && Math.round(parseInt(lsData.intervalLS, 10)) === parseInt(lsData.intervalLS, 10)) {
+      autoscrollerBS.interval = parseInt(lsData.intervalLS, 10);
+    } else {
+      autoscrollerBS.interval = (Math.round(autoscrollerBS.interval) === autoscrollerBS.interval) ? autoscrollerBS.interval : 10;
       autoscrollerBS.ls.set({
         "intervalLS": autoscrollerBS.interval
       });
-    } else {
-      autoscrollerBS.interval = storedSettings.intervalLS;
     }
 
     return autoscrollerBS.interval;
@@ -32,13 +34,13 @@ let autoscrollerBS = {
 
       autoscrollerBS.timmer = setInterval(function() {
         browser.tabs.sendMessage(tab.id, {});
-      }, autoscrollerBS.ls.get().then(autoscrollerBS.checkStoredSettings, autoscrollerBS.onLSError));
+      }, autoscrollerBS.ls.get().then(autoscrollerBS.checkLSData, autoscrollerBS.onLSError));
     }
     //}}}
   },
 
   "onLSError": function(e) {
-    return autoscrollerBS.interval;
+    return 10;
   }
 };
 

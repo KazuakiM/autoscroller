@@ -12,7 +12,7 @@ let autoscrollerOUI = {
   },
 
   "onError": function(e) {
-    console.error(e);
+    intervalInput.value = 10;
   }
 };
 
