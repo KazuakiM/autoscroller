@@ -26,11 +26,18 @@ let autoscrollerBS = {
     clearInterval(autoscrollerBS.timmer);
 
     if (autoscrollerBS.timmer !== null) {
-      //TODO: アイコン?
+      browser.browserAction.setIcon({
+        "tabId": tab.id,
+        "path": "img/dead.svg"
+      });
+
       autoscrollerBS.timmer = null;
 
     } else {
-      //TODO: アイコン?
+      browser.browserAction.setIcon({
+        "tabId": tab.id,
+        "path": "img/active.svg"
+      });
 
       autoscrollerBS.timmer = setInterval(function() {
         browser.tabs.sendMessage(tab.id, {});

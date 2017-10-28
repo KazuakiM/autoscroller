@@ -1,7 +1,7 @@
 {
     "background": {"scripts": ["src/background.js"]},
     "browser_action": {
-        "default_icon": "img/browser_action_32.png",
+        "default_icon": "img/dead.svg",
         "default_title": "AutsSroller"
     },
     "content_scripts": [{
@@ -11,8 +11,8 @@
     "description": "AutsSroller",
     "homepage_url": "https://github.com/KazuakiM/autoscroller",
     "icons": {
-        "48": "img/icons_48.png",
-        "96": "img/icons_48.png"
+        "48": "img/dead.svg",
+        "96": "img/dead.svg"
     },
     "manifest_version": 2,
     "name": "AutsSroller",
