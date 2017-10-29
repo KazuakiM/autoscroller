@@ -1,26 +1,26 @@
 {
-    "applications": {"gecko": {"id": "0.1"}},
+    "applications": {"gecko": {"id": "{9242aa97-ecc3-4f15-9142-474a66c3e0ca}"}},
     "background": {"scripts": ["src/background.js"]},
     "browser_action": {
         "default_icon": "img/dead.svg",
-        "default_title": "AutsSroller"
+        "default_title": "AutoSroller"
     },
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": ["src/content_scripts.js"]
     }],
-    "description": "AutsSroller",
+    "description": "AutoSroller",
     "homepage_url": "https://github.com/KazuakiM/autoscroller",
     "icons": {
         "48": "img/dead.svg",
         "96": "img/dead.svg"
     },
     "manifest_version": 2,
-    "name": "AutsSroller",
+    "name": "AutoSroller",
     "options_ui": {"page": "src/options_ui.html"},
     "permissions": [
         "activeTab",
         "storage"
     ],
-    "version": "1.0"
+    "version": "1.1"
 }

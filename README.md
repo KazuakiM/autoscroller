@@ -1,2 +1,2 @@
-# AutsSroller
-Autscroller webextensions for FireFox.
+# AutoSroller
+AutoSroller webextensions for FireFox.
