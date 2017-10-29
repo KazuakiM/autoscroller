@@ -3,24 +3,24 @@
     "background": {"scripts": ["src/background.js"]},
     "browser_action": {
         "default_icon": "img/dead.svg",
-        "default_title": "AutoSroller"
+        "default_title": "AutoScroller"
     },
     "content_scripts": [{
         "matches": ["<all_urls>"],
         "js": ["src/content_scripts.js"]
     }],
-    "description": "AutoSroller",
+    "description": "AutoScroller",
     "homepage_url": "https://github.com/KazuakiM/autoscroller",
     "icons": {
         "48": "img/dead.svg",
         "96": "img/dead.svg"
     },
     "manifest_version": 2,
-    "name": "AutoSroller",
+    "name": "AutoScroller",
     "options_ui": {"page": "src/options_ui.html"},
     "permissions": [
         "activeTab",
         "storage"
     ],
-    "version": "1.1"
+    "version": "1.2"
 }
